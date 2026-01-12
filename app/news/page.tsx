@@ -14,7 +14,7 @@ export default function NewsPage() {
                     animate={{ opacity: 1, x: 0 }}
                     className="mb-16 border-l-4 border-primary pl-8"
                 >
-                    <h1 className="text-6xl md:text-8xl font-black tracking-tighter uppercase mb-4">
+                    <h1 className="text-5xl sm:text-6xl md:text-8xl font-black tracking-tighter uppercase mb-4">
                         Tech <span className="text-primary">Logs</span>
                     </h1>
                     <p className="text-xl text-gray-500 max-w-2xl leading-relaxed">

@@ -43,18 +43,18 @@ export default function CartPage() {
                                 initial={{ opacity: 0, y: 20 }}
                                 animate={{ opacity: 1, y: 0 }}
                                 exit={{ opacity: 0, scale: 0.9 }}
-                                className="glass p-4 rounded-xl flex items-center gap-4"
+                                className="glass p-4 rounded-xl flex flex-col sm:flex-row items-center gap-4"
                             >
-                                <div className="relative w-24 h-24 bg-white/5 rounded-lg overflow-hidden flex-shrink-0">
+                                <div className="relative w-full sm:w-24 h-48 sm:h-24 bg-white/5 rounded-lg overflow-hidden flex-shrink-0">
                                     <Image src={item.image} alt={item.name} fill className="object-cover" />
                                 </div>
 
-                                <div className="flex-grow">
+                                <div className="flex-grow text-center sm:text-left">
                                     <h3 className="text-lg font-bold">{item.name}</h3>
                                     <p className="text-primary font-mono">${item.price}</p>
                                 </div>
 
-                                <div className="flex items-center gap-4">
+                                <div className="flex items-center gap-6 sm:gap-4 w-full sm:w-auto justify-between sm:justify-end border-t sm:border-t-0 border-primary/10 pt-4 sm:pt-0">
                                     <span className="text-sm text-gray-400">Qty: {item.quantity}</span>
                                     <button
                                         onClick={() => removeFromCart(item.id)}

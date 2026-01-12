@@ -39,7 +39,7 @@ export default function Home() {
               Smart & Sustainable
             </motion.div>
 
-            <motion.h1 variants={fadeIn} className="text-6xl md:text-8xl font-black tracking-tighter leading-none mb-6 text-foreground">
+            <motion.h1 variants={fadeIn} className="text-5xl sm:text-6xl md:text-8xl font-black tracking-tighter leading-none mb-6 text-foreground">
               SUSTAINABLE <br />
               <span className="text-transparent bg-clip-text bg-gradient-to-r from-primary via-secondary to-blue-500 tech-glow-text">INNOVATION</span>
             </motion.h1>
@@ -133,7 +133,7 @@ export default function Home() {
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ delay: index * 0.2 }}
                 viewport={{ once: true }}
-                className="tech-card group h-[550px] flex flex-col"
+                className="tech-card group min-h-[550px] flex flex-col"
               >
                 <div className="relative h-2/5 w-full overflow-hidden">
                   <div className="absolute inset-0 bg-primary/20 mix-blend-overlay z-10 group-hover:bg-transparent transition-colors"></div>
@@ -182,7 +182,7 @@ export default function Home() {
             <div className="absolute inset-0 bg-gradient-to-r from-black/90 via-black/80 to-black/90 z-10"></div>
 
             <div className="relative z-20">
-              <h2 className="text-4xl md:text-7xl font-black text-white mb-6 tracking-tighter">
+              <h2 className="text-4xl sm:text-5xl md:text-7xl font-black text-white mb-6 tracking-tighter">
                 READY TO <span className="text-transparent bg-clip-text bg-gradient-to-r from-primary to-secondary">UPGRADE?</span>
               </h2>
               <p className="text-gray-400 mb-10 max-w-2xl mx-auto text-lg">

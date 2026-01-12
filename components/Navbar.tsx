@@ -78,8 +78,16 @@ export default function Navbar() {
                         </Link>
                     </div>
 
-                    {/* Mobile menu button */}
-                    <div className="-mr-2 flex md:hidden">
+                    {/* Mobile controls */}
+                    <div className="-mr-2 flex items-center md:hidden gap-2">
+                        <Link href="/cart" className="p-2 text-gray-600 hover:text-primary transition-colors relative">
+                            <ShoppingCart size={20} />
+                            {mounted && cart.length > 0 && (
+                                <span className="absolute top-0 right-0 inline-flex items-center justify-center px-1.5 py-0.5 text-[10px] font-bold leading-none text-white transform translate-x-1/4 -translate-y-1/4 bg-accent rounded-full">
+                                    {cart.length}
+                                </span>
+                            )}
+                        </Link>
                         <button
                             onClick={() => setIsOpen(!isOpen)}
                             className="inline-flex items-center justify-center p-2 rounded-md text-gray-600 hover:text-primary hover:bg-gray-100 focus:outline-none"

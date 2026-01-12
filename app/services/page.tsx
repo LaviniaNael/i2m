@@ -20,7 +20,7 @@ export default function ServicesPage() {
                     animate={{ opacity: 1, y: 0 }}
                     className="text-left mb-24 border-l-4 border-primary pl-8"
                 >
-                    <h1 className="text-6xl md:text-8xl font-black mb-6 tracking-tighter uppercase">
+                    <h1 className="text-5xl sm:text-6xl md:text-8xl font-black mb-6 tracking-tighter uppercase">
                         Our <span className="text-primary">Systems</span>
                     </h1>
                     <p className="text-xl text-gray-500 max-w-2xl leading-relaxed">

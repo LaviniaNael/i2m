@@ -20,7 +20,7 @@ export default function AboutPage() {
                         animate={{ opacity: 1, x: 0 }}
                         className="border-l-4 border-primary pl-8"
                     >
-                        <h1 className="text-6xl md:text-8xl font-black mb-8 tracking-tighter uppercase italic">
+                        <h1 className="text-5xl sm:text-6xl md:text-8xl font-black mb-8 tracking-tighter uppercase italic">
                             The <span className="text-primary">Mission</span>
                         </h1>
                         <p className="text-2xl text-gray-500 font-bold mb-8 leading-tight uppercase">
@@ -57,7 +57,7 @@ export default function AboutPage() {
                             transition={{ delay: index * 0.2 }}
                             className="bg-white p-12 text-center tech-card border-b-4 border-b-primary"
                         >
-                            <div className="text-6xl md:text-7xl font-black text-foreground mb-4 tabular-nums tracking-tighter">{stat.value}</div>
+                            <div className="text-5xl sm:text-6xl md:text-7xl font-black text-foreground mb-4 tabular-nums tracking-tighter">{stat.value}</div>
                             <div className="text-primary text-xs font-black uppercase tracking-[0.3em]">{stat.label}</div>
                         </motion.div>
                     ))}

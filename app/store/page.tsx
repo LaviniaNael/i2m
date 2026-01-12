@@ -20,7 +20,7 @@ export default function StorePage() {
                     <div className="inline-flex items-center gap-2 px-4 py-1.5 bg-primary/5 text-primary text-[10px] uppercase font-black tracking-[0.2em] mb-4 border border-primary/20">
                         <ShieldCheck size={14} /> Official i2M Supply Store
                     </div>
-                    <h1 className="text-6xl md:text-8xl font-black mb-6 tracking-tighter uppercase italic">
+                    <h1 className="text-5xl sm:text-6xl md:text-8xl font-black mb-6 tracking-tighter uppercase italic">
                         The <span className="text-primary tech-glow-text">Boutique</span>
                     </h1>
                     <p className="text-gray-500 max-w-xl mx-auto leading-relaxed">
