@@ -1,0 +1,156 @@
+@import "tailwindcss";
+
+:root {
+  --background: #ffffff;
+  --foreground: #0f172a;
+  --primary: #2563EB;
+  --secondary: #0891B2;
+  --accent: #F97316;
+  --card-bg: rgba(255, 255, 255, 0.9);
+  --card-border: #e2e8f0;
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-primary: var(--primary);
+  --color-secondary: var(--secondary);
+  --color-accent: var(--accent);
+  --color-card-bg: var(--card-bg);
+  --color-card-border: var(--card-border);
+}
+
+body {
+  background-color: var(--background);
+  color: var(--foreground);
+  font-family: var(--font-inter), sans-serif;
+  overflow-x: hidden;
+  background-image:
+    linear-gradient(#E2E8F0 1px, transparent 1px),
+    linear-gradient(to right, #E2E8F0 1px, transparent 1px);
+  background-size: 40px 40px;
+  background-attachment: fixed;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: var(--font-outfit), sans-serif;
+  text-transform: uppercase;
+  letter-spacing: -0.02em;
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: #f1f5f9;
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--secondary);
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--primary);
+}
+
+/* Tech Utilities */
+@layer utilities {
+
+  .btn-tech,
+  .btn-tech-outline {
+    position: relative;
+    padding: 0.75rem 2rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    clip-path: polygon(10px 0, 100% 0, 100% calc(100% - 10px), calc(100% - 10px) 100%, 0 100%, 0 10px);
+    transition: all 0.3s ease;
+    filter: drop-shadow(0 0 2px rgba(37, 99, 235, 0.3));
+  }
+
+  .btn-tech {
+    background: var(--background);
+    color: var(--foreground);
+    border: 1px solid var(--primary);
+  }
+
+  .btn-tech:hover {
+    background: var(--primary);
+    color: white;
+    filter: drop-shadow(0 0 10px rgba(37, 99, 235, 0.6));
+    transform: translateY(-2px);
+  }
+
+  .btn-tech-outline {
+    background: transparent;
+    border: 1px solid var(--secondary);
+    color: var(--foreground);
+  }
+
+  .btn-tech-outline:hover {
+    background: var(--secondary);
+    color: white;
+    filter: drop-shadow(0 0 10px rgba(8, 145, 178, 0.6));
+    transform: translateY(-2px);
+  }
+
+  .tech-card {
+    background: var(--card-bg);
+    border: 1px solid rgba(37, 99, 235, 0.1);
+    position: relative;
+    overflow: hidden;
+    transition: all 0.3s ease;
+  }
+
+  .tech-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 4px;
+    height: 100%;
+    background: var(--primary);
+    opacity: 0;
+    transition: opacity 0.3s ease;
+  }
+
+  .tech-card:hover {
+    border-color: var(--primary);
+    box-shadow: 0 10px 30px -10px rgba(37, 99, 235, 0.2);
+    transform: translateY(-5px);
+  }
+
+  .tech-card:hover::before {
+    opacity: 1;
+  }
+}
+
+/* Animations */
+@keyframes float {
+  0% {
+    transform: translateY(0px);
+  }
+
+  50% {
+    transform: translateY(-20px);
+  }
+
+  100% {
+    transform: translateY(0px);
+  }
+}
+
+.animate-float {
+  animation: float 6s ease-in-out infinite;
+}
+
+.tech-glow-text {
+  text-shadow: 0 0 20px rgba(37, 99, 235, 0.3);
+}
